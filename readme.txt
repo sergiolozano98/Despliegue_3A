@@ -1,17 +1,17 @@
-1บ En el fichero vagrant/html tenemos nuestras web, las configuramos a nuestrog gusto
+1ยบ En el fichero vagrant/html tenemos nuestras web, las configuramos a nuestrog gusto
 
-2บ configurar los fichero .conf de vagrant/conf que tenemos ya creado.
+2ยบ configurar los fichero .conf de vagrant/conf que tenemos ya creado.
 
 <VirtualHost *:80>
     ServerAdmin admin@ejemplo.com
-    ServerName ejemplo.com
-    ServerAlias www.ejemplo.com
-    DocumentRoot /var/www/ejemplo.com/public_html
+    ServerName pagina1.com
+    ServerAlias www.pagina1.com
+    DocumentRoot /vagrant/html/pagina1
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-3บ Reiniciar apache con sudo service apache2 restart
+3ยบ Reiniciar apache con sudo service apache2 restart
 
 y comporbar este mensaje:
 * Restarting web server apache2
@@ -19,7 +19,7 @@ y comporbar este mensaje:
 
 
 
-4บ En tu maquina host tenemos que configurar nuestro fichero hosts
+4ยบ En tu maquina host tenemos que configurar nuestro fichero hosts
 
 192.168.33.10 pagina1.com
 192.168.33.10 pagina2.com
